@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Example Bank – Access Level 1</title>
+  <style>
+    body {
+      background-color: #f4f6f9;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+    }
+    .bank-container {
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      width: 600px;
+      padding: 40px;
+    }
+    h1 {
+      color: #003366;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .account-info {
+      background: #e6f0ff;
+      padding: 20px;
+      border-radius: 8px;
+      margin-bottom: 30px;
+    }
+    .account-info p {
+      font-size: 1.2em;
+      margin: 5px 0;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      text-align: left;
+      padding: 10px;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #003366;
+      color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f2f2f2;
+    }
+  </style>
+</head>
+<body>
+  <div class="bank-container">
+    <h1>Example Bank</h1>
+    <div class="account-info">
+      <p><strong>Imię i nazwisko:</strong> Jan Kowalski</p>
+      <p><strong>Stan konta:</strong> 21,37 zł</p>
+    </div>
+
+    <h2>Historia transakcji</h2>
+    <table>
+      <tr>
+        <th>Data</th>
+        <th>Opis</th>
+        <th>Kwota</th>
+      </tr>
+      <tr>
+        <td>2025-09-01</td>
+        <td>Hotdog – Żabka</td>
+        <td>5,99 zł</td>
+      </tr>
+      <tr>
+        <td>2025-09-01</td>
+        <td>Monopolowy</td>
+        <td>13,99 zł</td>
+      </tr>
+      <tr>
+        <td>2025-09-02</td>
+        <td>Hotdog – Żabka</td>
+        <td>5,99 zł</td>
+      </tr>
+      <tr>
+        <td>2025-09-02</td>
+        <td>Monopolowy</td>
+        <td>13,99 zł</td>
+      </tr>
+      <tr>
+        <td>2025-09-03</td>
+        <td>Hotdog – Żabka</td>
+        <td>5,99 zł</td>
+      </tr>
+      <tr>
+        <td>2025-09-03</td>
+        <td>Monopolowy</td>
+        <td>13,99 zł</td>
+      </tr>
+    </table>
+  </div>
+</body>
+</html>
