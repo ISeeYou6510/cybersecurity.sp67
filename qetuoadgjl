@@ -1,0 +1,70 @@
+
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Level 1 – Hasło w kodzie</title>
+  <style>
+    body {
+      background-color: #0a1a3f;
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+    }
+    h1 {
+      font-size: 4em;
+      margin-bottom: 30px;
+    }
+    input {
+      padding: 15px;
+      font-size: 1.5em;
+      border-radius: 8px;
+      border: none;
+      margin: 10px;
+      width: 300px;
+    }
+    button {
+      padding: 15px 30px;
+      font-size: 1.5em;
+      border: none;
+      border-radius: 8px;
+      background: #1e2a55;
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    button:hover {
+      background: #4da6ff;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+  <h1>Level 1</h1>
+  <p>Podaj hasło, aby dostać się dalej</p>
+  <input type="password" id="password" placeholder="Wpisz hasło">
+  <button onclick="checkPassword()">Zaloguj</button>
+  <div id="result"></div>
+
+  <script>
+    // UWAGA: Hasło jest wpisane na stałe w kodzie!
+    const secretPassword = "SuperSekret123";
+
+    function checkPassword() {
+      const input = document.getElementById("password").value;
+      if (input === secretPassword) {
+        document.getElementById("result").innerHTML = "✅ Dostęp przyznany! Brawo!";
+      } else {
+        document.getElementById("result").innerHTML = "❌ Złe hasło";
+      }
+    }
+  </script>
+</body>
+</html>
