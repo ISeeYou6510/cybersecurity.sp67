@@ -49,10 +49,16 @@
     button:hover {
       background: #002244;
     }
+    .message {
+      text-align: center;
+      margin-top: 15px;
+      font-weight: bold;
+    }
     .error {
       color: red;
-      text-align: center;
-      margin-top: 10px;
+    }
+    .success {
+      color: green;
     }
   </style>
   <script src="password.js"></script>
@@ -69,17 +75,22 @@
 
       <button type="submit">Zaloguj</button>
     </form>
-    <p id="error" class="error"></p>
+    <p id="message" class="message"></p>
   </div>
 
   <script>
     function checkLogin(event) {
       event.preventDefault();
-      const password = document.getElementById('password').value;
-      if (password === SECRET_PASSWORD) {
-        document.body.innerHTML = "<h1>✔ Zalogowano pomyślnie!</h1><p>Gratulacje, udało Ci się odgadnąć słabe hasło.</p>";
+      const login = document.getElementById('login').value.trim();
+      const password = document.getElementById('password').value.trim();
+      const message = document.getElementById('message');
+
+      if (login === "j.kowalski" && password === SECRET_PASSWORD) {
+        message.textContent = "✔ Zalogowano pomyślnie!";
+        message.className = "message success";
       } else {
-        document.getElementById('error').innerText = "Błędne hasło.";
+        message.textContent = "✖ Błędny login lub hasło.";
+        message.className = "message error";
       }
     }
   </script>
