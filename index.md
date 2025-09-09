@@ -53,7 +53,7 @@
   <p>Wybierz poziom i sprawdź swoje umiejętności</p>
 
   <div class="levels">
-    <a href="level1.html">Level 1 – Hasło w kodzie</a>
+    <a href="qetuoadgjl.html">Level 1 – Hasło w kodzie</a>
     <a href="level2.html">Level 2 – Łatwe podstrony</a>
     <a href="level3.html">Level 3 – Słabe hasła</a>
     <a href="level4.html">Level 4 – Plik konfiguracyjny</a>
