@@ -1,0 +1,1 @@
+const SECRET_PASSWORD = "1234";
