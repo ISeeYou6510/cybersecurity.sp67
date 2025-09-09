@@ -21,50 +21,20 @@
       width: 650px;
       padding: 40px;
     }
-    h1 {
-      color: #003366;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    .account-info {
-      background: #e6f0ff;
-      padding: 20px;
-      border-radius: 8px;
-      margin-bottom: 30px;
-    }
-    .account-info p {
-      font-size: 1.2em;
-      margin: 5px 0;
-    }
-    .employee-info {
-      background: #ffe6e6;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 30px;
-      color: #990000;
-      display: none; /* ukryte dla zwykłego klienta */
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    th, td {
-      text-align: left;
-      padding: 10px;
-      border-bottom: 1px solid #ddd;
-    }
-    th {
-      background-color: #003366;
-      color: white;
-    }
-    tr:nth-child(even) {
-      background-color: #f2f2f2;
-    }
+    h1 { color: #003366; text-align: center; margin-bottom: 30px; }
+    .account-info { background: #e6f0ff; padding: 20px; border-radius: 8px; margin-bottom: 30px; }
+    .account-info p { font-size: 1.2em; margin: 5px 0; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 10px; border-bottom: 1px solid #ddd; }
+    th { background-color: #003366; color: white; }
+    tr:nth-child(even) { background-color: #f2f2f2; }
+    .employee-info { background: #ffe6e6; padding: 15px; border-radius: 8px; margin-top: 30px; color: #990000; }
   </style>
 </head>
 <body>
   <div class="bank-container">
-    <h1>Example Bank – Level 2</h1>
+    <h1>Example Bank – Access Level 2</h1>
+
     <div class="account-info">
       <p><strong>Imię i nazwisko:</strong> Jan Kowalski</p>
       <p><strong>Stan konta:</strong> 21,37 zł</p>
@@ -79,25 +49,14 @@
       <tr><td>2025-09-02</td><td>Monopolowy</td><td>13,99 zł</td></tr>
     </table>
 
-    <!-- Sekcja tylko dla pracowników banku -->
     <div class="employee-info">
-      <h3>Dane dla pracowników</h3>
+      <h3>Dane dla pracowników banku</h3>
       <p>PESEL klienta: 88010112345</p>
       <p>Adres zamieszkania: ul. Szkolna 12, 61-123 Poznań</p>
       <p>Numer konta wewnętrzny banku: 1029384756</p>
       <p>PIN karty: 1234</p>
+      <p>Gratulacje! Dotarłeś do Level 2 ✅</p>
     </div>
   </div>
-
-  <script>
-    // Przykład: pokazanie danych pracownika po wpisaniu hasła pracownika
-    const employeePassword = "Pracownik2025";
-    const employeeInfo = document.querySelector(".employee-info");
-
-    let pass = prompt("Podaj hasło pracownika, aby zobaczyć dodatkowe dane:");
-    if(pass === employeePassword){
-      employeeInfo.style.display = "block";
-    }
-  </script>
 </body>
 </html>
