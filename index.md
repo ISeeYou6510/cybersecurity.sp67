@@ -5,7 +5,7 @@
   <title>HackMe School</title>
   <style>
     body {
-      background-color: #0a1a3f; /* granat */
+      background-color: #0a1a3f;
       color: #f0f0f0;
       font-family: Arial, sans-serif;
       display: flex;
@@ -16,40 +16,35 @@
       margin: 0;
     }
     h1 {
-      font-size: 3em;
+      font-size: 6em; /* dużo większy tytuł */
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 50px;
       color: #ffffff;
-      animation: fadeColor 3s infinite alternate;
-    }
-    @keyframes fadeColor {
-      from { color: #ffffff; }
-      to { color: #4da6ff; }
     }
     p {
-      margin-bottom: 30px;
-      font-size: 1.2em;
+      margin-bottom: 50px;
+      font-size: 2em; /* większy podtytuł */
       color: #cccccc;
     }
     .levels {
       display: flex;
       flex-direction: column;
-      gap: 15px;
+      gap: 30px;
     }
     .levels a {
       background: #1e2a55;
-      padding: 12px 25px;
-      border-radius: 10px;
+      padding: 25px 50px; /* większe przyciski */
+      border-radius: 16px;
       color: #ffffff;
       text-decoration: none;
-      font-size: 1.1em;
+      font-size: 2em; /* większa czcionka */
       transition: all 0.3s ease;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.4);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
     }
     .levels a:hover {
       background: #4da6ff;
-      transform: scale(1.05);
-      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
+      transform: scale(1.1);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.7);
     }
   </style>
 </head>
