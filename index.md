@@ -55,7 +55,7 @@
   <div class="levels">
     <a href="qetuoadgjl.html">Level 1 – Hasło w kodzie</a>
     <a href="wryipsfhk/examplebank_acceslvl1.html">Level 2 – Łatwe podstrony</a>
-    <a href="level3.html">Level 3 – Słabe hasła</a>
+    <a href="adgjlxvn.html">Level 3 – Słabe hasła</a>
     <a href="level4.html">Level 4 – Plik konfiguracyjny</a>
     <a href="level5.html">Level 5 – Dane w URL</a>
     <a href="level6.html">Level 6 – Brute Force</a>
