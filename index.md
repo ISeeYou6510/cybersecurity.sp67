@@ -5,9 +5,9 @@
   <title>HackMe School</title>
   <style>
     body {
-      background-color: black;
-      color: #00ff00;
-      font-family: monospace;
+      background-color: #0a1a3f; /* granat */
+      color: #f0f0f0;
+      font-family: Arial, sans-serif;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -16,35 +16,45 @@
       margin: 0;
     }
     h1 {
-      font-size: 4em;
+      font-size: 3em;
       text-align: center;
-      margin-bottom: 30px;
-      animation: blink 1s infinite;
+      margin-bottom: 20px;
+      color: #ffffff;
+      animation: fadeColor 3s infinite alternate;
     }
-    @keyframes blink {
-      50% { opacity: 0; }
+    @keyframes fadeColor {
+      from { color: #ffffff; }
+      to { color: #4da6ff; }
     }
     p {
-      margin-bottom: 40px;
-      font-size: 1.5em;
+      margin-bottom: 30px;
+      font-size: 1.2em;
+      color: #cccccc;
+    }
+    .levels {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
     .levels a {
-      display: block;
-      margin: 15px;
-      color: #00ff00;
+      background: #1e2a55;
+      padding: 12px 25px;
+      border-radius: 10px;
+      color: #ffffff;
       text-decoration: none;
-      font-size: 1.5em;
+      font-size: 1.1em;
       transition: all 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.4);
     }
     .levels a:hover {
-      color: #ff0000;
-      transform: scale(1.2);
-      text-shadow: 0 0 10px #ff0000;
+      background: #4da6ff;
+      transform: scale(1.05);
+      box-shadow: 0 6px 12px rgba(0,0,0,0.6);
     }
   </style>
 </head>
 <body>
-  <h1 id="title">HACKME SCHOOL</h1>
+  <h1>HackMe School</h1>
   <p>Wybierz poziom i sprawdź swoje umiejętności</p>
 
   <div class="levels">
@@ -55,18 +65,5 @@
     <a href="level5.html">Level 5 – Dane w URL</a>
     <a href="level6.html">Level 6 – Brute Force</a>
   </div>
-
-  <script>
-    // Migający losowo kolorowy tytuł
-    const title = document.getElementById("title");
-    function randomColor() {
-      const colors = ["#00ff00", "#ff0000", "#00ffff", "#ffff00", "#ff00ff", "#ffffff"];
-      return colors[Math.floor(Math.random() * colors.length)];
-    }
-    setInterval(() => {
-      title.style.color = randomColor();
-      title.style.textShadow = `0 0 20px ${randomColor()}`;
-    }, 500);
-  </script>
 </body>
 </html>
