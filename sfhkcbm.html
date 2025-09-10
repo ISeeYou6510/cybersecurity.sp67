@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lotnisko SP67 – Panel pasażera</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #eef2f7;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      padding-top: 50px;
+    }
+    .container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px rgba(0,0,0,0.2);
+      width: 400px;
+    }
+    h1 { text-align: center; color: #003366; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background: #003366;
+      color: white;
+    }
+    .hidden { display: none; }
+    .admin-panel {
+      margin-top: 20px;
+      padding: 15px;
+      background: #f8f9fa;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    .admin-panel h2 { color: #800000; }
+  </style>
+  <script>
+    let config = { devmode: false };
+
+    // wczytanie config.json
+    fetch("config.json")
+      .then(resp => resp.json())
+      .then(data => { config = data; showPanels(); })
+      .catch(err => { console.error("Nie udało się wczytać config.json", err); showPanels(); });
+
+    function showPanels() {
+      // ukryty panel devmode
+      if (config.devmode) {
+        document.getElementById("admin-panel").classList.remove("hidden");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>Panel pasażera</h1>
+
+    <table>
+      <tr><th>Imię i nazwisko</th><td>Jan Kowalski</td></tr>
+      <tr><th>Numer lotu</th><td>LO1234</td></tr>
+      <tr><th>Miejsce</th><td>12A</td></tr>
+      <tr><th>Status</th><td>Odprawiony</td></tr>
+    </table>
+
+    <div id="admin-panel" class="admin-panel hidden">
+      <h2>Tryb Dev – dane pasażerów</h2>
+      <table>
+        <tr><th>Imię i nazwisko</th><th>Lot</th><th>Miejsce</th><th>Status</th></tr>
+        <tr><td>Anna Nowak</td><td>LO1235</td><td>1B</td><td>Odprawiony</td></tr>
+        <tr><td>Piotr Wiśniewski</td><td>LO1236</td><td>2C</td><td>Opóźniony</td></tr>
+        <tr><td>Katarzyna Kowalczyk</td><td>LO1237</td><td>3D</td><td>Odprawiony</td></tr>
+        <tr><td>Łukasz Zieliński</td><td>LO1238</td><td>4A</td><td>Odprawiony</td></tr>
+        <tr><td>Monika Lewandowska</td><td>LO1239</td><td>5F</td><td>Opóźniony</td></tr>
+      </table>
+    </div>
+  </div>
+</body>
+</html>
