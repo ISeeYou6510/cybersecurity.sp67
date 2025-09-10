@@ -45,22 +45,6 @@
     }
     .admin-panel h2 { color: #800000; }
   </style>
-  <script>
-    let config = { devmode: false };
-
-    // wczytanie config.json
-    fetch("config.json")
-      .then(resp => resp.json())
-      .then(data => { config = data; showPanels(); })
-      .catch(err => { console.error("Nie udało się wczytać config.json", err); showPanels(); });
-
-    function showPanels() {
-      // ukryty panel devmode
-      if (config.devmode) {
-        document.getElementById("admin-panel").classList.remove("hidden");
-      }
-    }
-  </script>
 </head>
 <body>
   <div class="container">
@@ -85,5 +69,23 @@
       </table>
     </div>
   </div>
+
+  <script>
+    function showPanels() {
+      // domyślna wartość
+      let devmode = false;
+
+      // sprawdź localStorage
+      const localDev = localStorage.getItem("devmode");
+      if(localDev === "true") devmode = true;
+
+      // pokaż panel, jeśli devmode = true
+      if(devmode){
+        document.getElementById("admin-panel").classList.remove("hidden");
+      }
+    }
+
+    document.addEventListener("DOMContentLoaded", showPanels);
+  </script>
 </body>
 </html>
