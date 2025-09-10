@@ -54,12 +54,8 @@
       margin-top: 15px;
       font-weight: bold;
     }
-    .error {
-      color: red;
-    }
-    .success {
-      color: green;
-    }
+    .error { color: red; }
+    .success { color: green; }
   </style>
   <script src="password.js"></script>
 </head>
@@ -84,6 +80,13 @@
       const login = document.getElementById('login').value.trim();
       const password = document.getElementById('password').value.trim();
       const message = document.getElementById('message');
+
+      // jeśli plik password.js się nie wczytał
+      if (typeof SECRET_PASSWORD === "undefined") {
+        message.textContent = "Błąd: brak pliku password.js";
+        message.className = "message error";
+        return;
+      }
 
       if (login === "j.kowalski" && password === SECRET_PASSWORD) {
         message.textContent = "✔ Zalogowano pomyślnie!";
